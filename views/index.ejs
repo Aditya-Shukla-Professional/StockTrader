@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AdiTrader</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">AdiTrader</div>
+      <div class="hamburger">&#9776;</div>
+    </div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="inv">Investments</a></li>
+        <li><a href="#" id="money">Add Money</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li class="balance">Balance: $<%= typeof balance !== "undefined" ? balance : 0 %></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="stocks">
+      <h2>Hello <%= typeof name !== "undefined" ? name : "Investor" %>!</h2>
+      <!-- Scrollable container -->
+      <div class="stocks-container">
+        <div class="stock-cards">
+          <!-- Example stock card -->
+          <% if(typeof stocks !== 'undefined'){%>
+          <% for(let i=0;i<stocks.length;i++){ %>
+          <div class="card">
+            <div class="card-header">
+              <span class="stock-name"><%= stocks[i].stock_name %></span>
+              <span class="stock-price">$<%= stocks[i].price %></span>
+            </div>
+            <div class="card-body">
+              <p class="holdings"><strong>Holdings:</strong> <%= holdings.find(h => h.symbol === stocks[i].stock_name)?.total_quantity || 0 %></p>
+              <p class="avg"><strong>Avg. Price:</strong> $<%= holdings.find(h => h.symbol === stocks[i].stock_name)?.avg_price_per_share || 0 %></p>
+              <label for="buy-qty-<%= i %>"><strong>Quantity to buy:</strong></label>
+              <input type="number" id="buy-qty-<%= i %>" name="buyQty" min="1" value="1" step="1" style="width: 60px; margin-left: 10px;"/>
+            </div>
+            <div class="card-footer">
+              <button class="btn buy">Buy</button>
+              <button class="btn sell">Sell</button>
+            </div>
+          </div>
+          <% }%>
+          <% }%>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <%= new Date().getFullYear() %> AdiTrader — Built by Aditya Shukla</p>
+    <p><a href="mailto:aditya.shukla.professional@gmail.com">Contact Us</a></p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="brain/main.js"></script>
+</body>
+</html>
