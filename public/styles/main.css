@@ -1,0 +1,260 @@
+/* ============ VARIABLES ============ */
+:root {
+  --bg: #f0eff5;
+  --nav-bg: linear-gradient(90deg, #6e4bd8, #3f2d91);
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --accent: #9b59b6;
+  --accent-dark: #6e4bd8;
+  --text: #2d2d2d;
+  --text-light: #555;
+  --btn-buy: #1abc9c;
+  --btn-sell: #e74c3c;
+  --shadow: rgba(0,0,0,0.1);
+}
+
+/* ============ GLOBAL ============ */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============ HEADER ============ */
+header {
+  background: var(--nav-bg);
+  padding: 1rem 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+nav ul li a {
+  padding: 0.5rem 0.8rem;
+  transition: background 0.3s;
+}
+nav ul li a:hover {
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+.balance {
+  font-weight: 600;
+  background: rgba(255,255,255,0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+/* ============ HERO ============ */
+.hero {
+  text-align: center;
+  padding: 4rem 2%;
+  background: var(--card-bg);
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--accent-dark);
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+/* ============ STOCK CARDS ============ */
+.stocks {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.stocks h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--accent-dark);
+}
+
+.stock-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 16px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.stock-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.stock-price {
+  font-size: 1.2rem;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.card-body p,
+.card-body label,
+.card-body input {
+  margin: 0.3rem 0;
+  color: var(--text-light);
+}
+
+.card-body input{
+  padding:0.2rem 0.3rem;
+  border-radius:0.2rem;
+}
+
+.card-body input:focus {
+  outline: none;
+  border-color: var(--btn-buy);
+  box-shadow: 0 0 6px var(--btn-buy);
+}
+
+.card-footer {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.6rem 0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+.buy {
+  background: var(--btn-buy);
+  color: white;
+}
+.sell {
+  background: var(--btn-sell);
+  color: white;
+}
+
+/* ============ FOOTER ============ */
+footer {
+  text-align: center;
+  padding: 1.5rem 2%;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+footer a {
+  color: var(--accent);
+}
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+
+/* ============ RESPONSIVE ============ */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hamburger on the right */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-left: auto; /* forces it to right side */
+}
+
+/* Responsive Nav */
+@media (max-width: 800px){
+  #inv{
+    display:none;
+  }
+}
+@media (max-width: 700px) {
+  header{
+    padding:1rem 1.5rem;
+  }
+  .header-container {
+    width:100%;
+  }
+  nav.nav-menu {
+    position: absolute;
+    top: 60px; /* height of header */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav.nav-menu ul {
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--nav-bg);
+    width: 100%;
+    padding: 1.5rem 1rem;
+    display: none;
+  }
+
+  nav.nav-menu ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 1%;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
