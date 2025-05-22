@@ -1,57 +1,92 @@
-<h1>📈 AdiTrader</h1>
+<h1>📊 AdiTrader - Paper Trading Simulator</h1>
 
-<p><strong>AdiTrader</strong> is a student project that simulates paper trading for US stocks using real-time price updates (every 8 seconds).</p>
+<p><strong>AdiTrader</strong> is a stock market paper trading simulator that lets users buy/sell US stocks using fake money. It fetches <strong>real-time stock prices (updated every 8 seconds)</strong> and simulates a simple investing experience.</p>
 
-<h2>🔐 Features</h2>
+<p>🚀 <a href="https://stocktrader-g4o0.onrender.com" target="_blank"><strong>Try Live Demo</strong></a></p>
+
+<hr>
+
+<h2>✨ Features</h2>
 <ul>
-  <li>User Login system</li>
-  <li>Buy/Sell US stocks (Paper Trading only, not real)</li>
-  <li>Real-time stock prices updated every 8 seconds</li>
-  <li>"Add Money" option to load fake funds</li>
-  <li>Persisted user sessions (logged-in users can see their stock portfolio)</li>
+  <li>User Login & Session Management</li>
+  <li>Buy/Sell US Stocks (paper trading only)</li>
+  <li>Real-time price updates (every 8 seconds)</li>
+  <li>"Add Money" button (top right) to inject fake funds</li>
+  <li>Responsive frontend made with EJS + CSS + JavaScript</li>
 </ul>
+
+<hr>
+
+<h2>🗃️ Folder Structure</h2>
+<pre>
+├── public/
+│   ├── styles/         ← Contains CSS files for the EJS templates
+│   └── brain/          ← Contains browser JavaScript (main.js)
+├── views/
+│   ├── index.ejs       ← Home page after login
+│   └── login.ejs       ← Login/signup page
+├── db.js               ← MySQL connection and queries
+├── index.js            ← Main Node.js backend file
+├── package.json        ← Node.js project file
+├── .gitignore
+└── README.md
+</pre>
+
+<hr>
+
+<h2>⚙️ How to Run It Locally</h2>
+
+<h3>1. Fork and Clone</h3>
+<pre>
+git clone https://github.com/&lt;your-username&gt;/AdiTrader.git
+cd AdiTrader
+</pre>
+
+<h3>2. Install Dependencies</h3>
+<pre>
+npm install
+</pre>
+
+<h3>3. Setup MySQL Database</h3>
+<ul>
+  <li>Create a MySQL database</li>
+  <li>Configure connection details in <code>db.js</code></li>
+  <li>Import your SQL schema (if provided separately)</li>
+</ul>
+
+<h3>4. Start the Server</h3>
+<pre>
+nodemon index.js
+</pre>
+<p><em>(If you don't have <code>nodemon</code>, install it with <code>npm install -g nodemon</code>)</em></p>
+
+<h3>5. Open in Browser</h3>
+<pre>
+http://localhost:3000
+</pre>
+
+<hr>
+
+<h2>🧠 Tech Stack</h2>
+<ul>
+  <li><strong>Frontend:</strong> HTML, CSS, EJS, JavaScript</li>
+  <li><strong>Backend:</strong> Node.js, Express.js</li>
+  <li><strong>Database:</strong> MySQL (Clever Cloud)</li>
+  <li><strong>Hosting:</strong> Render (server) + Clever Cloud (MySQL)</li>
+</ul>
+
+<hr>
 
 <h2>⚠️ Disclaimer</h2>
-<p>This is a <strong>student project</strong> built using free resources:</p>
 <ul>
-  <li><strong>Render</strong> - for hosting the server</li>
-  <li><strong>Clever Cloud</strong> - for hosting the MySQL database</li>
-</ul>
-<p>Because of the limitations of free services, the application may:</p>
-<ul>
-  <li>Experience delays</li>
-  <li>Occasionally stop working</li>
+  <li>This is a student project using <strong>free hosting services</strong>.</li>
+  <li>You may experience <strong>slow loading or downtime</strong>.</li>
+  <li>All trading is simulated — <strong>no real money or accounts</strong> involved.</li>
 </ul>
 
-<h2>🧭 How It Works</h2>
-<ol>
-  <li>Sign up or log in</li>
-  <li>Use the <strong>"Add Money"</strong> button in the top right to load fake currency</li>
-  <li>Search and buy/sell US stocks using paper money</li>
-  <li>View your portfolio on the frontend dashboard</li>
-</ol>
+<hr>
 
-<h2>💡 Purpose</h2>
-<p>This project is made to learn and demonstrate skills in:</p>
-<ul>
-  <li>Web development</li>
-  <li>APIs and real-time data handling</li>
-  <li>MySQL database integration</li>
-  <li>User authentication and session management</li>
-</ul>
+<h2>🙌 Contributing</h2>
+<p>Feel free to fork and improve! Pull requests are welcome for feature improvements or bug fixes.</p>
 
-<h2>📚 Tech Stack</h2>
-<ul>
-  <li><strong>Frontend:</strong> HTML, JavaScript</li>
-  <li><strong>Backend:</strong> Node.js / Express</li>
-  <li><strong>Database:</strong> MySQL (hosted on Clever Cloud)</li>
-  <li><strong>Hosting:</strong> Render (free tier)</li>
-</ul>
-
-<h2>🧪 Note</h2>
-<p>This is <strong>not a real trading platform</strong>. It is for educational/demo purposes only. No real money is involved or required.</p>
-
-<h2>🚀 Getting Started</h2>
-<p>To try it out, visit: <strong><em>stocktrader-g4o0.onrender.com</em></strong></p>
-
-<p>Happy Trading! 💸</p>
+<p><strong>Made with ❤️ by Aditya Shukla</strong></p>
