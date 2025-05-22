@@ -18,9 +18,8 @@
 
 * * *
 
-🗃️ Folder Structure
---------------------
-
+<h2>🗃️ Folder Structure</h2>
+<pre>
 ├── public/
 │   ├── styles/         ← Contains CSS files for the EJS templates
 │   └── brain/          ← Contains browser JavaScript (main.js)
@@ -32,37 +31,40 @@
 ├── package.json        ← Node.js project file
 ├── .gitignore
 └── README.md
+</pre>
 
-* * *
+<hr>
 
-⚙️ How to Run It Locally
-------------------------
+<h2>⚙️ How to Run It Locally</h2>
 
-### 1\. Fork and Clone
-
-git clone https://github.com/<Aditya-Shukla-Professional>/StockTrader.git
+<h3>1. Fork and Clone</h3>
+<pre>
+git clone https://github.com/&lt;Aditya-Shukla-Professional&gt;/StockTrader.git
 cd StockTrader
+</pre>
 
-### 2\. Install Dependencies
-
+<h3>2. Install Dependencies</h3>
+<pre>
 npm install
+</pre>
 
-### 3\. Setup MySQL Database
+<h3>3. Setup MySQL Database</h3>
+<ul>
+  <li>Create a MySQL database</li>
+  <li>Configure connection details in <code>db.js</code></li>
+  <li>Import your SQL schema (if provided separately)</li>
+</ul>
 
-*   Create a MySQL database
-*   Configure connection details in `db.js`
-*   Import your SQL schema (if provided separately)
-
-### 4\. Start the Server
-
+<h3>4. Start the Server</h3>
+<pre>
 nodemon index.js
+</pre>
+<p><em>(If you don't have <code>nodemon</code>, install it with <code>npm install -g nodemon</code>)</em></p>
 
-_(If you don't have `nodemon`, install it with `npm install -g nodemon`)_
-
-### 5\. Open in Browser
-
+<h3>5. Open in Browser</h3>
+<pre>
 http://localhost:3000
-
+</pre>
 * * *
 
 🧠 Tech Stack
@@ -89,4 +91,11 @@ http://localhost:3000
 
 Feel free to fork and improve! Pull requests are welcome for feature improvements or bug fixes.
 
+### Connect with me:
+
+<p align="left">
+<a href="https://www.linkedin.com/in/aditya-shukla-8b3494341/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="aditya shukla" height="30" width="40" /></a>
+</p>
+
 **Made with ❤️ by Aditya Shukla**
+
