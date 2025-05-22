@@ -91,6 +91,8 @@ http://localhost:3000
 
 Feel free to fork and improve! Pull requests are welcome for feature improvements or bug fixes.
 
+* * *
+
 ### Connect with me:
 
 <p align="left">
