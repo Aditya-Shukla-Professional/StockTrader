@@ -38,7 +38,7 @@
 
 <h3>1. Fork and Clone</h3>
 <pre>
-git clone https://github.com/&lt;your-username&gt;/AdiTrader.git
+git clone https://github.com/&lt;Aditya-Shukla-Professional&gt;/StockTrader.git
 cd AdiTrader
 </pre>
 
