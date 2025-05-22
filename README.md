@@ -39,7 +39,7 @@
 
 <h3>1. Fork and Clone</h3>
 <pre>
-git clone https://github.com/&lt;Aditya-Shukla-Professional&gt;/StockTrader.git
+git clone https://github.com/Aditya-Shukla-Professional/StockTrader.git
 cd StockTrader
 </pre>
 
